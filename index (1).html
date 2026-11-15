@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="uz">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070b13">
+<meta name="description" content="Fayzik Sensi — Free Fire telefon va PC sozlamalari, qurol qo‘llanmasi va olmos kalkulyatori.">
+<meta property="og:title" content="Fayzik Sensi — Cyber Gaming Hub">
+<meta property="og:description" content="Free Fire sozlamalari, qurilmalar katalogi va foydali vositalar.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%23070b13'/%3E%3Ctext x='50' y='70' font-size='62' text-anchor='middle' font-family='Arial Black' fill='%2320e6ff'%3EF%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fayzik-sensi.netlify.app/">
+<meta property="og:image" content="https://fayzik-sensi.netlify.app/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<title>Fayzik Sensi | Cyber Gaming Hub</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070b13;--panel:#0d1522;--panel2:#101d2e;--line:#20364d;--cyan:#20e6ff;--blue:#397bff;--purple:#9b5cff;--text:#eaf7ff;--muted:#91a9bd;--good:#51f2bd;--warn:#ffc857;--danger:#ff668b;--glow:0 0 22px #20e6ff24;--radius:15px}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:radial-gradient(ellipse at 15% -10%,#17365b88,transparent 40%),radial-gradient(ellipse at 100% 20%,#3b176044,transparent 35%),var(--bg);color:var(--text);font:500 17px/1.5 Rajdhani,Arial,sans-serif;min-height:100vh}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.14;background-image:linear-gradient(#1b3854 1px,transparent 1px),linear-gradient(90deg,#1b3854 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(to bottom,#000,transparent 85%);z-index:-1}
+a{color:inherit}button,input,select{font:inherit}button{cursor:pointer}
+header{position:sticky;top:0;z-index:50;background:#070d17eF;border-bottom:1px solid #20e6ff55;backdrop-filter:blur(16px);box-shadow:0 8px 30px #0006}
+.top{max-width:1180px;margin:auto;padding:12px 20px;display:flex;align-items:center;gap:20px}
+.brand{font:800 19px Orbitron,sans-serif;letter-spacing:1px;text-decoration:none;white-space:nowrap;color:var(--cyan);text-shadow:0 0 15px #20e6ff88}
+.brand span{color:white}
+nav{display:flex;gap:6px;overflow:auto;scrollbar-width:none;margin-left:auto}nav::-webkit-scrollbar{display:none}
+nav a{white-space:nowrap;text-decoration:none;padding:8px 11px;border:1px solid transparent;border-radius:8px;color:var(--muted);font-weight:700}
+nav a:hover,nav a.active{color:var(--cyan);border-color:#20e6ff55;background:#20e6ff10}
+.wrap{max-width:1180px;margin:auto;padding:25px 20px 70px}
+.hero{position:relative;overflow:hidden;border:1px solid #20e6ff66;border-radius:22px;padding:clamp(25px,5vw,55px);background:linear-gradient(115deg,#0b1a2b 0%,#101b32 52%,#21123b 100%);box-shadow:var(--glow)}
+.hero:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #20e6ff66;border-radius:50%;right:-80px;top:-100px;box-shadow:0 0 0 25px #20e6ff0b,0 0 0 55px #20e6ff09,0 0 80px #20e6ff22}
+.kicker{color:var(--cyan);font:700 12px Orbitron;letter-spacing:2px;text-transform:uppercase}
+h1,h2,h3{font-family:Orbitron,Arial,sans-serif}h1{font-size:clamp(28px,5vw,48px);line-height:1.15;margin:12px 0}h1 span{color:var(--cyan);text-shadow:0 0 22px #20e6ff66}
+.hero p{max-width:620px;color:#b6c9da;font-size:20px;margin:12px 0 24px}
+.actions{display:flex;flex-wrap:wrap;gap:10px;position:relative;z-index:1}
+.btn{border:1px solid #20e6ff88;border-radius:9px;padding:11px 17px;background:linear-gradient(110deg,#0c4054,#16305a);color:#eaffff;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:.2s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 0 20px #20e6ff33;border-color:var(--cyan)}
+.btn.primary{background:linear-gradient(110deg,#13b8d3,#2866dc);color:#04111d;border:0}
+.btn.ghost{background:#0a1422}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px;margin:22px 0}
+.tile,.panel,.stat{background:linear-gradient(145deg,#101c2b,#0a121e);border:1px solid var(--line);border-radius:var(--radius);box-shadow:0 10px 30px #0002}
+.tile{padding:20px;text-decoration:none;transition:.2s;min-height:145px}.tile:hover{border-color:#20e6ff99;transform:translateY(-3px);box-shadow:var(--glow)}
+.tile .ico{font-size:26px}.tile h3{font-size:15px;color:var(--cyan);margin:10px 0 5px}.tile p{color:var(--muted);margin:0;font-size:16px}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:15px;margin:30px 0 14px}.section-head h2{font-size:20px;margin:0}.section-head p{color:var(--muted);margin:0}
+.panel{padding:20px;margin:14px 0}.panel h2{font-size:18px;color:var(--cyan);margin:0 0 14px}
+label{display:block;color:#b8cddd;font-weight:700;margin:12px 0 5px}
+input,select{width:100%;background:#07111d;border:1px solid #2b4761;border-radius:8px;color:var(--text);padding:11px 12px;outline:none}
+input:focus,select:focus{border-color:var(--cyan);box-shadow:0 0 0 3px #20e6ff17}
+input[type=range]{padding:0;accent-color:var(--cyan)}
+.row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.choice{display:flex;flex-wrap:wrap;gap:8px}.choice button{background:#0a1523;border:1px solid #2a435c;color:#c8d9e7;border-radius:8px;padding:8px 12px}.choice button.selected{border-color:var(--cyan);color:var(--cyan);background:#20e6ff12;box-shadow:inset 0 0 14px #20e6ff10}
+.result-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.result{padding:12px;border:1px solid #29435b;border-radius:9px;background:#091522}
+.result .name{color:var(--muted);font-size:15px}.result strong{display:block;font:700 23px Orbitron;color:var(--cyan);margin:3px 0}.meter{height:5px;background:#1b2b3d;border-radius:9px;overflow:hidden}.meter i{display:block;height:100%;background:linear-gradient(90deg,#1bc8e8,#557cff);border-radius:9px}
+.note{border-left:3px solid var(--warn);padding:9px 12px;background:#ffc8570c;color:#c5d1dc;border-radius:0 8px 8px 0;font-size:15px;margin-top:14px}
+.muted{color:var(--muted)}.small{font-size:14px}.hidden{display:none!important}
+.list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.weapon{padding:13px;border:1px solid var(--line);border-radius:10px;background:#0a1522}.weapon b{color:var(--cyan)}
+.package-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(155px,1fr));gap:12px}
+.package{padding:15px;border:1px solid #28445d;background:#0a1726;border-radius:12px;text-align:center}.package b{display:block;color:var(--cyan);font:700 15px Orbitron;margin:7px 0}.package strong{font-size:19px;color:#fff}
+.tabs{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:15px}.tabs button{background:#0a1523;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:8px 12px}.tabs button.active{color:var(--cyan);border-color:var(--cyan)}
+footer{text-align:center;border-top:1px solid var(--line);padding:28px 15px;color:var(--muted);margin-top:30px}
+.status{font-size:14px;color:var(--good);min-height:20px}
+@media(max-width:800px){.top{align-items:flex-start;flex-direction:column;gap:8px}.top nav{margin:0;width:100%}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero:after{opacity:.35}.three{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.wrap{padding:17px 13px 50px}.grid{grid-template-columns:1fr 1fr;gap:9px}.tile{padding:13px;min-height:130px}.tile h3{font-size:13px}.tile p{font-size:14px}.row,.list{grid-template-columns:1fr}.result-grid{grid-template-columns:1fr 1fr}.panel{padding:15px}.section-head{align-items:start;flex-direction:column}.hero{padding:25px 18px}.hero p{font-size:17px}}
+
+.premium{position:relative;margin-top:14px;border:1px solid #ffc85788;border-radius:var(--radius);padding:18px;background:linear-gradient(145deg,#1d1808,#0a121e);box-shadow:0 0 24px #ffc85712}
+.premium h2{color:var(--warn);font-size:17px;margin:0 0 4px}
+.premium .price{font:800 20px Orbitron;color:#fff;margin:8px 0}
+.premium .result strong{color:var(--warn)}
+.premium .locked strong{filter:blur(7px);user-select:none}
+.premium .code{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}.premium .code input{flex:1;min-width:170px;text-transform:uppercase}
+.btn.gold{background:linear-gradient(110deg,#ffc857,#ff9a3c);color:#1b1100;border:0}
+.lang{display:flex;gap:4px}.lang button{background:#0a1523;color:var(--muted);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-weight:700}.lang button.on{color:var(--cyan);border-color:var(--cyan)}
+#phone-formula,#pc-formula{font-family:monospace}
+</style>
+</head>
+<body>
+<header><div class="top">
+<a class="brand" href="#home">FAYZIK <span>SENSI</span></a>
+<nav>
+<a href="#home">Bosh sahifa</a><a href="#phone">Telefon</a><a href="#pc">PC</a><a href="#weapons">Qurollar</a><a href="#almaz">Almaz xizmati</a><a href="#saved">Saqlangan</a>
+</nav><div class="lang"><button data-lang="uz">UZ</button><button data-lang="ru">RU</button></div></div></header>
+<div class="wrap">
+<main id="home" class="page">
+<section class="hero">
+<div class="kicker">CYBER GAMING PLATFORM / UZ</div>
+<h1>FAYZIK <span>SENSI</span></h1>
+<p>Free Fire uchun qurilmangizga mos boshlang‘ich sozlamalarni toping va qurollar bo‘yicha tavsiyalarni ko‘ring.</p>
+<div class="actions"><a class="btn primary" href="#phone">⚡ Sensi topish</a><a class="btn" href="#weapons">🎯 Qurollar</a></div>
+</section>
+<div class="grid">
+<a class="tile" href="#phone"><div class="ico">📱</div><h3>TELEFON SENSI</h3><p>Model, RAM, Hz va o‘yin uslubi bo‘yicha</p></a>
+<a class="tile" href="#pc"><div class="ico">🖥️</div><h3>PC / EMULYATOR</h3><p>DPI va emulator uchun boshlang‘ich sozlama</p></a>
+<a class="tile" href="#weapons"><div class="ico">🎯</div><h3>QUROLLAR</h3><p>Free Fire qurollari va mos scope</p></a>
+<a class="tile" href="#saved"><div class="ico">💾</div><h3>SAQLANGAN PROFIL</h3><p>O‘zingiz tanlagan sozlamalarni saqlang</p></a>
+</div>
+<div class="section-head"><h2>PLATFORMA HAQIDA</h2><p>Doimiy yangilanadigan loyiha</p></div>
+<div class="three">
+<div class="stat panel"><div class="kicker">01 / DEVICE</div><h3>Qurilmaga mos</h3><p class="muted">Model va qurilma xususiyatlarini tanlang.</p></div>
+<div class="stat panel"><div class="kicker">02 / CONTROL</div><h3>O‘zingiz sozlang</h3><p class="muted">Natijani nusxalang, saqlang va sinang.</p></div>
+<div class="stat panel"><div class="kicker">03 / IMPROVE</div><h3>Sinov muhim</h3><p class="muted">Qiymatlar boshlang‘ich tavsiya, kafolat emas.</p></div>
+</div>
+</main>
+
+<main id="phone" class="page hidden">
+<div class="section-head"><h2>📱 TELEFON UCHUN SENSITIVITY</h2><p>0–200 shkala</p></div>
+<div class="panel">
+<div class="row">
+<div><label for="device">Telefon modeli</label><input id="device" list="device-list" placeholder="Masalan: Redmi Note 10 Pro"><datalist id="device-list"></datalist></div>
+<div><label for="ram">RAM</label><select id="ram"><option value="2">2 GB</option><option value="4" selected>4 GB</option><option value="6">6 GB</option><option value="8">8 GB</option><option value="12">12 GB+</option></select></div>
+<div><label for="hz">Ekran chastotasi</label><select id="hz"><option>60</option><option>90</option><option>120</option><option>144</option></select></div>
+<div><label for="style">O‘yin uslubi</label><select id="style"><option value="rush">Rusher / yaqin jang</option><option value="balanced" selected>Aralash</option><option value="sniper">Snayper / uzoq masofa</option></select></div>
+</div>
+<label>Hozirgi sezgirlik holati</label><div class="choice" id="feedback"><button data-value="fast">Juda tez</button><button data-value="normal" class="selected">Yaxshi</button><button data-value="slow">Sekin</button></div>
+<div class="note">Eslatma: qiymatlar formula asosida (baza × koeffitsient F) hisoblanadi, lekin baribir taxminiy boshlang‘ich tavsiya. Free Fire versiyasi, FPS, ekran javobi va o‘yinchining qo‘li natijaga ta’sir qiladi.</div>
+</div>
+<div class="panel"><h2>SIZNING BOSHLANG‘ICH SOZLAMANGIZ</h2><div id="phone-results" class="result-grid"></div><p class="muted small" id="phone-formula" style="margin:10px 0 0"></p>
+<div class="actions" style="margin-top:15px"><button class="btn primary" id="copy-phone">📋 Nusxa olish</button><button class="btn" id="save-phone">💾 Profilni saqlash</button></div><p class="status" id="phone-status"></p></div>
+<div class="premium" id="phone-premium"></div>
+<div class="panel"><h2>QANDAY SINASH KERAK?</h2><ol class="muted"><li>Training Ground’da 5–10 daqiqa sinab ko‘ring.</li><li>Bir vaqtda faqat bitta qiymatni ozgina o‘zgartiring.</li><li>Bir nechta match davomida bir xil sozlamani tekshiring.</li><li>O‘zingizga qulay bo‘lgan qiymatni saqlang.</li></ol></div>
+</main>
+
+<main id="pc" class="page hidden">
+<div class="section-head"><h2>🖥️ PC / EMULYATOR SENSI</h2><p>Windows va emulator</p></div>
+<div class="panel">
+<div class="row">
+<div><label for="emulator">Emulator</label><select id="emulator"><option>MSI App Player</option><option>BlueStacks</option><option>LDPlayer</option><option>GameLoop</option><option>Boshqa</option></select></div>
+<div><label for="dpi">Sichqoncha DPI</label><select id="dpi"><option>400</option><option selected>800</option><option>1200</option><option>1600</option><option>2400</option><option>3200</option></select></div>
+<div><label for="pc-style">O‘yin uslubi</label><select id="pc-style"><option value="rush">Rusher</option><option value="balanced" selected>Aralash</option><option value="sniper">Snayper</option></select></div>
+<div><label for="pc-feedback">Hozirgi holat</label><select id="pc-feedback"><option value="fast">Juda tez</option><option value="normal" selected>Yaxshi</option><option value="slow">Sekin</option></select></div>
+</div>
+<div class="panel" style="margin:15px 0 0"><h2>PC TAVSIYA QIYMATLARI</h2><div id="pc-results" class="result-grid"></div><p class="muted small" id="pc-formula" style="margin:10px 0 0"></p></div>
+<div class="premium" id="pc-premium"></div>
+<div class="note">Emulator ichidagi DPI, mouse sensitivity, game controls va FPS alohida sozlamalardir. Bu sahifa faqat boshlang‘ich yo‘nalish beradi. Emulatorning o‘zidagi qiymatlarni ham tekshiring.</div>
+</div>
+</main>
+
+<main id="weapons" class="page hidden">
+<div class="section-head"><h2>🎯 QUROLLAR QO‘LLANMASI</h2><p>Qurol turini qidiring</p></div>
+<div class="panel">
+<label for="weapon-search">Qurol nomi</label><input id="weapon-search" placeholder="Masalan: UMP, M1887, AK47...">
+<div class="tabs" id="weapon-tabs"><button class="active" data-filter="all">Hammasi</button><button data-filter="AR">AR</button><button data-filter="SMG">SMG</button><button data-filter="Shotgun">Shotgun</button><button data-filter="DMR">DMR</button><button data-filter="Sniper">Sniper</button><button data-filter="Pistol">Pistol</button></div>
+<div id="weapon-list" class="list"></div>
+<p class="muted small">Qurol kartasidagi scope — umumiy tavsiya. Har bir qurolning o‘z recoil va otish uslubi bor. Qiymatlar formula bilan, o‘rtacha qurilma (6 GB, 90 Hz) va aralash uslub uchun hisoblangan.</p>
+</div>
+</main>
+
+
+
+
+
+<main id="almaz" class="page hidden">
+<div class="section-head"><h2>💎 ALMAZ XIZMATI</h2><p>Free Fire olmoslari, pass va vaucherlar</p></div>
+<div class="panel" id="shop-guide"></div>
+<div class="grid">
+ <div class="panel">
+  <h2>💎 Olmos narxlari</h2>
+  <p class="muted small">Narxlar o‘zgarishi mumkin. Buyurtmadan oldin Telegram orqali tasdiqlang.</p>
+  <div class="price-list">
+   <div class="result"><span class="name">100 olmos</span><strong>13 000 so‘m</strong></div>
+   <div class="result"><span class="name">200 olmos</span><strong>24 000 so‘m</strong></div>
+   <div class="result"><span class="name">500 olmos</span><strong>60 000 so‘m</strong></div>
+   <div class="result"><span class="name">1 000 olmos</span><strong>110 000 so‘m</strong></div>
+   <div class="result"><span class="name">2 000 olmos</span><strong>210 000 so‘m</strong></div>
+   <div class="result"><span class="name">5 000 olmos</span><strong>500 000 so‘m</strong></div>
+   <div class="result"><span class="name">6 000 olmos</span><strong>600 000 so‘m</strong></div>
+  </div>
+ </div>
+ <div class="panel">
+  <h2>🎟️ Lite, haftalik, oylik va vaucherlar</h2>
+  <div class="price-list">
+   <div class="result"><span class="name">Lite</span><strong>8 000 so‘m</strong></div>
+   <div class="result"><span class="name">Haftalik</span><strong>27 000 so‘m</strong></div>
+   <div class="result"><span class="name">Oylik</span><strong>100 000 so‘m</strong></div>
+   <div class="result"><span class="name">Level Up 6</span><strong>7 000 so‘m</strong></div>
+   <div class="result"><span class="name">Level Up 10</span><strong>9 000 so‘m</strong></div>
+   <div class="result"><span class="name">Level Up 15</span><strong>9 000 so‘m</strong></div>
+   <div class="result"><span class="name">Level Up 20</span><strong>10 000 so‘m</strong></div>
+   <div class="result"><span class="name">Level Up 25</span><strong>10 000 so‘m</strong></div>
+   <div class="result"><span class="name">Level Up 30</span><strong>16 000 so‘m</strong></div>
+  </div>
+ </div>
+</div>
+<div class="panel" style="margin-top:14px">
+ <h2>📩 Almaz xizmati bo‘yicha murojaat</h2>
+ <p class="muted">Buyurtma, mavjud paketlar va yakuniy narxni bilish uchun Telegram orqali yozing.</p>
+ <a class="btn" href="https://t.me/fayzik_ffstrem" target="_blank" rel="noopener">✈ Telegram: @fayzik_ffstrem</a>
+</div>
+<div class="note" style="margin-top:14px">Eslatma: to‘lovdan oldin paket, UID va yakuniy summani Telegram orqali tasdiqlab oling.</div>
+</main>
+
+<main id="saved" class="page hidden">
+<div class="section-head"><h2>💾 SAQLANGAN PROFILLAR</h2><p>Ushbu brauzerda saqlanadi</p></div>
+<div class="panel"><div id="saved-list"></div><p class="muted small">Eslatma: profillar faqat shu qurilma va brauzerda saqlanadi. Sayt ma’lumotlarini tozalash ularni o‘chirishi mumkin.</p></div>
+</main>
+
+</div>
+<footer>
+<b style="color:var(--cyan);font-family:Orbitron">FAYZIK SENSI</b><br>
+Free Fire sozlamalari va foydali vositalar<br>
+<div class="small" id="visits" style="margin-bottom:6px"></div><span class="small">© 2026 · Mustaqil fan platformasi. Garena bilan rasmiy bog‘liqligi yo‘q.</span>
+<div class="actions" style="justify-content:center;margin-top:15px">
+<a class="btn" href="https://www.youtube.com/@Fayzik_fire" target="_blank" rel="noopener">▶ YouTube</a>
+<a class="btn" href="https://www.instagram.com/fayzikff/" target="_blank" rel="noopener">◎ Instagram</a>
+<a class="btn" href="https://t.me/Fayzikff" target="_blank" rel="noopener">✈ Telegram</a>
+<a class="btn" href="https://t.me/fayzik_ffstrem" target="_blank" rel="noopener">💎 Almaz xizmati</a>
+</div>
+</footer>
+
+<script>
+const $=id=>document.getElementById(id);
+const LANG0=(()=>{try{const l=localStorage.getItem("fs-lang");if(l)return l}catch(e){}return /^ru/i.test(navigator.language||"")?"ru":"uz"})();
+let LANG=LANG0,VISITS=null;const ORIG=new WeakMap();
+const RU={"Bosh sahifa": "Главная", "Telefon": "Телефон", "Qurollar": "Оружие", "Almaz xizmati": "Алмазы", "Saqlangan": "Сохранённое", "CYBER GAMING PLATFORM / UZ": "CYBER GAMING PLATFORM / RU", "Free Fire uchun qurilmangizga mos boshlang'ich sozlamalarni toping va qurollar bo'yicha tavsiyalarni ko'ring.": "Найдите стартовые настройки Free Fire под ваше устройство и посмотрите рекомендации по оружию.", "⚡ Sensi topish": "⚡ Найти сенсу", "🎯 Qurollar": "🎯 Оружие", "TELEFON SENSI": "СЕНСА ДЛЯ ТЕЛЕФОНА", "Model, RAM, Hz va o'yin uslubi bo'yicha": "По модели, RAM, Гц и стилю игры", "PC / EMULYATOR": "ПК / ЭМУЛЯТОР", "DPI va emulator uchun boshlang'ich sozlama": "Стартовая настройка для DPI и эмулятора", "QUROLLAR": "ОРУЖИЕ", "Free Fire qurollari va mos scope": "Оружие Free Fire и подходящие прицелы", "SAQLANGAN PROFIL": "СОХРАНЁННЫЙ ПРОФИЛЬ", "O'zingiz tanlagan sozlamalarni saqlang": "Сохраняйте выбранные настройки", "PLATFORMA HAQIDA": "О ПЛАТФОРМЕ", "Doimiy yangilanadigan loyiha": "Постоянно обновляемый проект", "Qurilmaga mos": "Под ваше устройство", "Model va qurilma xususiyatlarini tanlang.": "Выберите модель и характеристики устройства.", "O'zingiz sozlang": "Настройте сами", "Natijani nusxalang, saqlang va sinang.": "Скопируйте результат, сохраните и проверьте.", "Sinov muhim": "Важна проверка", "Qiymatlar boshlang'ich tavsiya, kafolat emas.": "Значения — стартовая рекомендация, не гарантия.", "📱 TELEFON UCHUN SENSITIVITY": "📱 ЧУВСТВИТЕЛЬНОСТЬ ДЛЯ ТЕЛЕФОНА", "0–200 shkala": "Шкала 0–200", "Telefon modeli": "Модель телефона", "Ekran chastotasi": "Частота экрана", "O'yin uslubi": "Стиль игры", "Rusher / yaqin jang": "Раш / ближний бой", "Aralash": "Смешанный", "Snayper / uzoq masofa": "Снайпер / дальний бой", "Hozirgi sezgirlik holati": "Текущая чувствительность", "Juda tez": "Слишком быстрая", "Yaxshi": "Нормальная", "Sekin": "Медленная", "Eslatma: qiymatlar formula asosida (baza × koeffitsient F) hisoblanadi, lekin baribir taxminiy boshlang'ich tavsiya. Free Fire versiyasi, FPS, ekran javobi va o'yinchining qo'li natijaga ta'sir qiladi.": "Примечание: значения считаются по формуле (база × коэффициент F), но это всё равно ориентировочная стартовая рекомендация. На результат влияют версия Free Fire, FPS, отклик экрана и рука игрока.", "SIZNING BOSHLANG'ICH SOZLAMANGIZ": "ВАШИ СТАРТОВЫЕ НАСТРОЙКИ", "📋 Nusxa olish": "📋 Копировать", "💾 Profilni saqlash": "💾 Сохранить профиль", "QANDAY SINASH KERAK?": "КАК ПРОВЕРЯТЬ?", "Training Ground'da 5–10 daqiqa sinab ko'ring.": "Потестируйте 5–10 минут на тренировочной площадке.", "Bir vaqtda faqat bitta qiymatni ozgina o'zgartiring.": "Меняйте за раз только одно значение и понемногу.", "Bir nechta match davomida bir xil sozlamani tekshiring.": "Проверьте одну и ту же настройку в нескольких матчах.", "O'zingizga qulay bo'lgan qiymatni saqlang.": "Сохраните то значение, которое вам удобно.", "Masalan: Redmi Note 10 Pro": "Например: Redmi Note 10 Pro", "🖥️ PC / EMULYATOR SENSI": "🖥️ СЕНСА ДЛЯ ПК / ЭМУЛЯТОРА", "Windows va emulator": "Windows и эмулятор", "Emulator": "Эмулятор", "Sichqoncha DPI": "DPI мыши", "Rusher": "Раш", "Snayper": "Снайпер", "Hozirgi holat": "Текущее состояние", "PC TAVSIYA QIYMATLARI": "РЕКОМЕНДУЕМЫЕ ЗНАЧЕНИЯ ДЛЯ ПК", "Boshqa": "Другой", "Emulator ichidagi DPI, mouse sensitivity, game controls va FPS alohida sozlamalardir. Bu sahifa faqat boshlang'ich yo'nalish beradi. Emulatorning o'zidagi qiymatlarni ham tekshiring.": "DPI, чувствительность мыши, управление в игре и FPS в эмуляторе настраиваются отдельно. Эта страница даёт лишь стартовое направление. Проверьте и значения внутри самого эмулятора.", "🎯 QUROLLAR QO'LLANMASI": "🎯 СПРАВОЧНИК ОРУЖИЯ", "Qurol turini qidiring": "Найдите тип оружия", "Qurol nomi": "Название оружия", "Hammasi": "Все", "Masalan: UMP, M1887, AK47...": "Например: UMP, M1887, AK47...", "Qurol kartasidagi scope — umumiy tavsiya. Har bir qurolning o'z recoil va otish uslubi bor. Qiymatlar formula bilan, o'rtacha qurilma (6 GB, 90 Hz) va aralash uslub uchun hisoblangan.": "Прицел на карточке — общая рекомендация. У каждого оружия своя отдача и стиль стрельбы. Значения рассчитаны по формуле для среднего устройства (6 ГБ, 90 Гц) и смешанного стиля.", "💎 ALMAZ XIZMATI": "💎 АЛМАЗЫ", "Free Fire olmoslari, pass va vaucherlar": "Алмазы Free Fire, пропуски и ваучеры", "💎 Olmos narxlari": "💎 Цены на алмазы", "Narxlar o'zgarishi mumkin. Buyurtmadan oldin Telegram orqali tasdiqlang.": "Цены могут меняться. Перед заказом подтвердите в Telegram.", "🎟️ Lite, haftalik, oylik va vaucherlar": "🎟️ Lite, недельный, месячный пропуск и ваучеры", "Haftalik": "Недельный", "Oylik": "Месячный", "📩 Almaz xizmati bo'yicha murojaat": "📩 Обращение по алмазам", "Buyurtma, mavjud paketlar va yakuniy narxni bilish uchun Telegram orqali yozing.": "Чтобы заказать, узнать доступные пакеты и итоговую цену, напишите в Telegram.", "Eslatma: to'lovdan oldin paket, UID va yakuniy summani Telegram orqali tasdiqlab oling.": "Примечание: перед оплатой подтвердите в Telegram пакет, UID и итоговую сумму.", "💾 SAQLANGAN PROFILLAR": "💾 СОХРАНЁННЫЕ ПРОФИЛИ", "Ushbu brauzerda saqlanadi": "Хранится в этом браузере", "Eslatma: profillar faqat shu qurilma va brauzerda saqlanadi. Sayt ma'lumotlarini tozalash ularni o'chirishi mumkin.": "Примечание: профили хранятся только на этом устройстве и в этом браузере. Очистка данных сайта может их удалить.", "Free Fire sozlamalari va foydali vositalar": "Настройки Free Fire и полезные инструменты", "© 2026 · Mustaqil fan platformasi. Garena bilan rasmiy bog'liqligi yo'q.": "© 2026 · Независимая фан-платформа. Официальной связи с Garena нет.", "💎 Almaz xizmati": "💎 Алмазы", "O'rta masofa": "Средняя дистанция", "Kuchli recoil, qisqa burst": "Сильная отдача, короткие очереди", "Uzoq masofa": "Дальняя дистанция", "Yaqin va o'rta masofa": "Ближняя и средняя дистанция", "Yaqin masofa": "Ближняя дистанция", "Juda yaqin masofa": "Очень ближняя дистанция", "Juda uzoq masofa": "Очень дальняя дистанция", "Scope": "Прицел", "Tavsiya sensi": "Рекомендуемая сенса", "Scopesiz": "Без прицела", "Qurol topilmadi.": "Оружие не найдено.", "Hozircha saqlangan profil yo'q. Telefon sahifasida profil saqlang.": "Сохранённых профилей пока нет. Сохраните профиль на странице телефона.", "O'chirish": "Удалить", "HEAD (BOSH) SENSI": "HEAD-СЕНСА (ГОЛОВА)", "Yuqoridagi qiymatlar bepul. Bosh nishonga olish uchun maxsus sozlama pullik.": "Значения выше бесплатные. Специальная настройка для стрельбы в голову — платная.", "Head sensi ochiq ✓": "Head-сенса открыта ✓", "✈ Telegram orqali sotib olish": "✈ Купить через Telegram", "To'lovdan keyin olgan kodingiz": "Код, полученный после оплаты", "Ochish": "Открыть", "Kodni kiriting.": "Введите код.", "Tekshirilmoqda...": "Проверяется...", "Kod noto'g'ri. Telegram orqali tekshiring.": "Неверный код. Уточните в Telegram.", "Brauzer kodni tekshira olmadi (HTTPS kerak).": "Браузер не смог проверить код (нужен HTTPS).", "so'm": "сум", "Nusxa olindi ✓": "Скопировано ✓", "Nusxa olish uchun brauzer ruxsati kerak.": "Для копирования нужно разрешение браузера.", "Clipboard qo'llab-quvvatlanmaydi. Qiymatlarni qo'lda belgilang.": "Буфер обмена не поддерживается. Отметьте значения вручную.", "Profil ushbu brauzerda saqlandi ✓": "Профиль сохранён в этом браузере ✓", "Model tanlanmagan": "Модель не выбрана", "model tanlanmagan": "модель не выбрана", "🧾 Qanday buyurtma beraman?": "🧾 Как сделать заказ?", "Quyidagi ro'yxatdan paket tanlang.": "Выберите пакет из списка ниже.", "Telegramda @fayzik_ffstrem ga paket nomi va Free Fire UID raqamingizni yozing.": "Напишите в Telegram @fayzik_ffstrem название пакета и свой Free Fire UID.", "To'lang:": "Оплатите:", "📋 Nusxa": "📋 Копия", "Aniq summani Telegramda tasdiqlang.": "Точную сумму подтвердите в Telegram.", "To'lov rekvizitlarini Telegram orqali so'rang, yakuniy summa ham o'sha yerda aytiladi.": "Реквизиты для оплаты запросите в Telegram, итоговая сумма тоже называется там.", "To'lov chekining skrinshotini Telegramga yuboring.": "Отправьте в Telegram скриншот чека об оплате.", "To'lov tasdiqlangach, paket hisobingizga tushadi.": "После подтверждения оплаты пакет поступит на ваш аккаунт.", "📌 Qoidalar": "📌 Правила", "Buyurtmadan oldin UID raqamingizni diqqat bilan tekshiring. Noto'g'ri UID ga yuborilgan paket uchun javobgar emasmiz.": "Перед заказом внимательно проверьте свой UID. За пакет, отправленный на неверный UID, мы не отвечаем.", "To'lov tasdiqlangach paket tushmasa, pulingiz qaytariladi yoki paket qayta yuboriladi.": "Если после подтверждения оплаты пакет не поступил, деньги вернут или пакет отправят повторно.", "Head sensi raqamli mahsulot: kod ochilgandan keyin pul qaytarilmaydi.": "Head-сенса — цифровой товар: после открытия кода деньги не возвращаются.", "🕒 Ish vaqti:": "🕒 Время работы:", "📞 Aloqa:": "📞 Контакты:", "Mijozlar fikri": "Отзывы клиентов", "✓ Nusxa olindi": "✓ Скопировано", "Qo'lda nusxalang": "Скопируйте вручную", "Qiymat = baza × F": "Значение = база × F", "holat": "состояние", "qurilma": "устройство", "(F maksimum 200 bilan cheklangan)": "(F ограничен максимумом 200)", "👁 Tashriflar:": "👁 Посещений:"};
+const N=x=>String(x).replace(/[‘’`ʻʼ]/g,"'").replace(/\s+/g," ").trim();
+const RUN={};Object.keys(RU).forEach(k=>RUN[N(k)]=RU[k]);
+const t=x=>{if(LANG!=="ru")return x;const k=N(x);return RUN[k]||x.replace(/so['‘’]m/g,"сум").replace(/(\d) olmos/,"$1 алмазов")};
+function renderVisits(){const el=$("visits");if(el)el.textContent=VISITS?t("👁 Tashriflar:")+" "+VISITS.toLocaleString(LANG==="ru"?"ru-RU":"uz-UZ"):""}
+function setLang(l){LANG=l;try{localStorage.setItem("fs-lang",l)}catch(_){}
+ document.documentElement.lang=l;
+ document.querySelectorAll(".lang button").forEach(b=>b.classList.toggle("on",b.dataset.lang===l));
+ const w=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);let n;
+ while(n=w.nextNode()){const p=n.parentNode.nodeName;if(p==="SCRIPT"||p==="STYLE")continue;const o=ORIG.has(n)?ORIG.get(n):n.nodeValue,v=o.trim();if(!v)continue;ORIG.set(n,o);n.nodeValue=o.replace(v,()=>t(v))}
+ document.querySelectorAll("[placeholder]").forEach(e=>{if(!e.dataset.ph)e.dataset.ph=e.placeholder;e.placeholder=t(e.dataset.ph)});
+ calcPhone();calcPC();renderWeapons();renderSaved();renderShop();renderVisits()}
+document.querySelector(".lang").addEventListener("click",e=>{const b=e.target.closest("button");if(b)setLang(b.dataset.lang)});
+// Tashrif hisoblagich: har bir brauzer 1 marta sanaladi
+(async()=>{const K="fayziksensi-netlify-app-visits";let seen=null;try{seen=localStorage.getItem("fs-visited")}catch(_){}
+ try{const r=await fetch("https://countapi.mileshilliard.com/api/v1/"+(seen?"get":"hit")+"/"+K);const j=await r.json();const v=parseInt(j.value,10);
+  if(v>0){VISITS=v;if(!seen)try{localStorage.setItem("fs-visited","1")}catch(_){ }renderVisits()}}catch(e){}})();
+const MAX=200, names=["General","Red Dot","2x Scope","4x Scope","AWM Scope","Free Look"];
+const bases={rush:[190,185,165,145,90,120],balanced:[185,175,160,140,88,120],sniper:[175,165,150,130,80,110]};
+const devices=["iPhone 11","iPhone 12","iPhone 13","iPhone 14","iPhone 15","iPhone 16","iPhone 14 Pro","iPhone 15 Pro","iPhone 16 Pro","Redmi 9A","Redmi 10","Redmi 12","Redmi Note 10","Redmi Note 10 Pro","Redmi Note 11","Redmi Note 12","Redmi Note 13","Redmi Note 13 Pro","Redmi Note 14","POCO M5","POCO M6","POCO X5","POCO X6","POCO X7","POCO F5","Samsung Galaxy A14","Samsung Galaxy A24","Samsung Galaxy A34","Samsung Galaxy A54","Samsung Galaxy A55","Samsung Galaxy S21","Samsung Galaxy S22","Samsung Galaxy S23","Samsung Galaxy S24","Infinix Hot 30","Infinix Hot 40","Infinix Note 30","Infinix Zero 30","Tecno Spark 20","Tecno Pova 5","Tecno Camon 30","Realme C55","Realme 11","Vivo Y36","Oppo A78","Google Pixel 8","OnePlus 11"];
+const weaponData=[
+["AR","M4A1","2x / 4x","O‘rta masofa"],["AR","AK47","2x / 4x","Kuchli recoil, qisqa burst"],["AR","SCAR","2x / 4x","O‘rta masofa"],["AR","Groza","2x / 4x","O‘rta masofa"],["AR","XM8","2x / 4x","O‘rta masofa"],["AR","M14","4x","Uzoq masofa"],
+["SMG","UMP","Red Dot / 2x","Yaqin va o‘rta masofa"],["SMG","MP40","Red Dot","Yaqin masofa"],["SMG","Vector","Red Dot","Yaqin masofa"],["SMG","Thompson","Red Dot / 2x","Yaqin masofa"],
+["Shotgun","M1887","Red Dot / no scope","Juda yaqin masofa"],["Shotgun","M1014","No scope","Juda yaqin masofa"],["Shotgun","MAG-7","No scope","Yaqin masofa"],
+["DMR","Woodpecker","4x","Uzoq masofa"],["DMR","SVD","4x","Uzoq masofa"],["DMR","SKS","4x","Uzoq masofa"],
+["Sniper","AWM","AWM Scope","Juda uzoq masofa"],["Sniper","Kar98k","Sniper Scope","Uzoq masofa"],["Sniper","M82B","Sniper Scope","Uzoq masofa"],
+["Pistol","Desert Eagle","No scope / Red Dot","Yaqin va o‘rta masofa"],["Pistol","G18","No scope","Yaqin masofa"]];
+// ===== SENSI MODELI =====
+// Qiymat_i = clamp( baza_i × F ),  F = holat × qurilma-sinfi × (RAM) × (Hz)   [telefon]
+//                                   F = holat × (800/DPI)^0.25                 [PC]
+// Hamma pog'ona (General, Red Dot, 2x...) bir xil F ga ko'paytiriladi, shuning uchun ularning o'zaro nisbati saqlanadi.
+// F shunday cheklanadiki, eng katta qiymat 200 dan oshmasin (aks holda nisbat buziladi).
+const MODEL={ram:.07,hz:.08,dpi:.25,fb:{fast:.94,normal:1,slow:1.06},tier:{flag:.98,mid:1,budget:1.03}};
+const tierOf=d=>/pro|max|ultra|poco x|poco f|galaxy s|iphone 1[4-6]/i.test(d)?"flag":/9a|a1[234]|spark go|pop/i.test(d)?"budget":"mid";
+function factor(style,o){const raw=MODEL.fb[o.fb]*(o.dpi?Math.pow(800/o.dpi,MODEL.dpi):MODEL.tier[o.tier]*Math.pow(6/o.ram,MODEL.ram)*Math.pow(90/o.hz,MODEL.hz)),cap=MAX/bases[style][0];return {F:Math.min(raw,cap),cap:raw>cap}}
+const scale=(a,F)=>a.map(v=>Math.max(0,Math.min(MAX,Math.round(v*F))));
+const r3=x=>x.toFixed(3);
+const money=n=>Math.round(n).toLocaleString(LANG==="ru"?"ru-RU":"uz-UZ");
+const formulaText=(parts,x)=>t("Qiymat = baza × F")+"  |  F = "+parts.join(" × ")+" = "+r3(x.F)+(x.cap?" "+t("(F maksimum 200 bilan cheklangan)"):"");
+// Qurollar: qiymat = balanced baza[scope] × sinf koeff. × qurol koeff.
+const CK={AR:1.04,SMG:1.08,Shotgun:1.07,DMR:.96,Sniper:1,Pistol:1.04},WR={AK47:.965,AWM:.966,Kar98k:1.02,M82B:.91,Woodpecker:.99,SVD:.98};
+const SC={"red dot":[1,"Red Dot"],"2x":[2,"2x"],"4x":[3,"4x"],"awm scope":[4,"AWM Scope"],"sniper scope":[4,"Sniper Scope"],"no scope":[0,"Scopesiz"]};
+const weaponSens=w=>w[2].split("/").map(x=>x.trim()).map(x=>{const [i,l]=SC[x.toLowerCase()]||[0,x];return (l==="Scopesiz"?t(l):l)+": "+Math.min(MAX,Math.round(bases.balanced[i]*CK[w[0]]*(WR[w[1]]||1)))}).join(" · ");
+const read=(key,fallback)=>{try{return JSON.parse(localStorage.getItem(key))??fallback}catch(e){return fallback}};
+let extraDevices=read("fs-extra-devices",[]);
+function allDevices(){return [...new Set([...devices,...extraDevices])]}
+function fillDevices(){ $("device-list").innerHTML=allDevices().map(x=>`<option value="${escapeHtml(x)}">`).join("");}
+function escapeHtml(s){return String(s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));}
+function calcPhone(){
+ const dv=$("device").value,ram=+$("ram").value,hz=+$("hz").value,style=$("style").value,fb=document.querySelector("#feedback .selected")?.dataset.value||"normal",tier=tierOf(dv);
+ const x=factor(style,{ram,hz,fb,tier}),vals=scale(bases[style],x.F);
+ $("phone-results").innerHTML=vals.map((v,i)=>resultCard(names[i],v)).join("");
+ $("phone-formula").textContent=formulaText([t("holat")+" "+MODEL.fb[fb],"RAM "+ram+"GB "+r3(Math.pow(6/ram,MODEL.ram)),hz+"Hz "+r3(Math.pow(90/hz,MODEL.hz)),t("qurilma")+" "+MODEL.tier[tier]],x);
+ renderPremium("phone-premium",style,x.F,dv||t("model tanlanmagan"));
+ return {device:dv||"Model tanlanmagan",ram,hz,style,values:vals};
+}
+
+const PREMIUM_PACKAGES=[
+ {id:"70",name:"70% HEAD",price:40000},
+ {id:"85",name:"85% HEAD",price:55000},
+ {id:"90",name:"90% HEAD",price:70000},
+ {id:"100",name:"100% HEAD",price:85000}
+];
+const CODE_HASHES=["1f24877017dca0876f87bf321ee59899bfabe740b59fdf222f95ab3852f5bab3", "eb7a0a1ab512ea5b97da479ca869acdfa9c591663f081fd15c2ce9f7eff22197", "952c7c42429c822903bdc61f1e74159017ef9e944d1f03b62360f88c6d023ae5", "1d6fc01e5459379d12e3c14333f0859de61c4b76880e5a3d12d7eac9710eeb79", "e9c0a9884585995e4de710f0cffd5a27d910b6b53631aee450001daa0c5d4025", "4d28d8cd24566cd026508a878778520e862ad8378d031426e44c17c3a21793d0", "b7a6a34f642f2b291cea7b89b50df433147cfdaa5fd386219be21ca95ab2e756", "aec8277a0cd33348ed6551bae4d95d5ed50516e12e0fd2ee7644f1f541d37b8a", "853278eeb5213d2e32ae032d1a952d72e7b2639eae32e744cd7825812debd681", "4c9f556ad93c28eb0d63c8d184b0388b266357b553e1e10f8bbb7bbc8b12b652", "00b2a9d271e611b49a8b4cfea72f81e3fa68ee96bee8a8461bd782f331d9fa71", "59245a8c6ee4eac3415c9b54d64ec7ec1a44dbfe70ee357fb41e87e416baf5de", "2542985b85dc8ff8fa2df2fe44be60e816dc1f825bb0719298a82f3e50872161", "c0d998b0c2d35e4f08193e5baa74e837c25318ac339b84267acced2f6c3253c8", "001fdf18fb8a8fe7325662722e6dd97a440e89918887f1172b73e648d30d575a", "d7956972914f3c95cb8911b3670d4ed1980d2680298f55afd9782557df73e88b", "de0ebabac9b82c8513409aae429a55005fc779a7760bb1f57737f496d819c9e3", "b87bb6f5a48c8636f1ebfbda48fda34ea1d5c5de465c886310cd75502eaacf14", "18b08486d56a55992c633d72e3fb08be73227e8377145ec7563b9de550ce291c", "36f51a7b8f97395f2ea07884b40a2bcb3c3f3cb4e22c63f59565ca214de9f4d7", "f15e69cf3c819509368d049d85b14ac375f6e553fd49912cb48018b1bf66a6f4", "1e6dd235619e83a80b4973e70bd9513d9b79986e94941e600d6392f1c07bdf60", "53717e25b18ee3f7c4ebbc016c9da29b6478af3a12e11583e7959eb7e47d59d4", "6ebe6069b8539705ad86bf49bfd366c9e0d54c6c5027a70fd9061ce4dade39d8", "61d0e4cd995325efb198e5ddb94e572ba7a47492a01e122acecdaa1fe04c8c07", "686f0b0d4fec725816e0b89632350f8b2c3e970cf37c077122fb21a9da5e57d2", "e0707dd2012ccfb6184b390d8bfa4278b36df4dd5fd5f59ceea29fb5e472a4b1", "1e59c00ff14a974bae4612f294204f6050660f5a7a0c49900321fd3b593c5e53", "404b7028be2ffbcac7bfd6c3a424eafee4c255afdff2006cdc7c47eae9a889ef", "dcfd4b6226e804a38cc588fa8a09f78ae04c120587acd7526d154a741225055e"];
+const headNames=["Head Red Dot","Head 2x","Head 4x"];
+let HEAD=null;
+const PAYLOAD="j42eaAQTkfGPLROzdkxA8O6C6L32xPHzVtSJ4SnXGYvLblQl2RDZGNAqZQJ+wMEhGCv9lZEVxaErou7lhOwrI9kWB2rkKYWarbNLaOMeeHuYNg/PXiEdlVOduAUv6nN/0fH5hk3jo/IsFb7PwQ==";
+const WRAPPED=["AdupRsJW14E+ROb3SEfUa2PA2Vf2vlSeE2sPotkGUiI71KhKYmSgZOBn3KucrYtwzQxKtX26SD02oVLc05ast+2ZAzVCMCnSBV2dFQ==", "R/50nQlN6eq+sgd324ud8VFqhIw/i9zeLFzQbGEnUA1m5hY4JKnW25sgsDBpyB020F7+2GkvnAGn0dWnif9OAjOP9YvfGuGmR5EzTQ==", "/en77JKpf9j79ix23NbVp256wKUueKPI5TsE5ub5tYgFCSOy1+XjlOL37Ybo+aQSgT5q169VtFAlJHs5w81qcd5txI0EPbzCNvfU4A==", "/1py3+U1e4af0tfHMCIKd95FlYZvv8/OHSp8BlRNPmYb8/15XAC6F1KPX4UG4Y5N+ThxETgx67IPh9BIMx2MDOzxY01uV6NQMWTAKQ==", "XrGzZDJ6im7oiJLhpHVnHdfUeUH6uibeZBEwCZhqaybqNS3ti5pEpK7OUzIypVrB4dWvLQyKfkqqhJ1FuOnCXKmxqYwjQ1aRnazjdw==", "SXbYblxDbi+fuxbosU+1OAUjsW1QKKhUu8bVmkHUOpO6TgLZeAj6Jz4CaOtSDK+zqD61GcDT3oGnaCTBAPM7AdGlVk4lX9QwrISoVQ==", "FyWDtQsJzWaEDddyZuz0ycSdXwl8kF9aWzFJruv/QK3ilH2RXm59lkhhRfuBxI6EOVujxPh11dPvlaOh3a6NqNhrHklWmBVTF24TWg==", "8Oe5VH2d4BUt2zgSKu4p7mvhxhLn0sU/7rcH6p+9bt4KEy1DiNcc3TldIGIWSub1Zat/fcRIJpDmDP8yLMg0c8yv/Rb+MR3Fd+2n9w==", "bfAnFIFs7ky8523yI9VhdTkXWq7ppo06KnioRU7yzySgovf/hzaCURhhARxjtiscbbVX3VqZhiDGbCvTPBc5coGSZY7IX8e6LjEamw==", "79QamzCrQJr/NSwZD7Ap7zzH8eLciT4Gj8SpaXGnLWCWVad2QEWxtgiAn1t2uFKFTjwrxS7rrutVpJnLPpOKt5Sb3vPN9x/sIW/mOA==", "7iE4q+b8bpBVU1TbnOJJhR8QaIrWJhWFFdFa2iYCjtA9QyJNh27gr1Dm/mzDovEqyyt9HJF4kyLYy6jWHKEzVVB6ClIYT/yk0EEWvA==", "oRJDK/e3m8PgynqdHR478r5PiUO3CxBs/YUcPRDMLik22uOgjViBrVfDMz0cqxNiGSmritJgSgoAoCZ83AuZ3pdVU6h8hmLV3pJtUw==", "vzM8/t2m8udsWCCctIp72MpC73Jk4lnEv2YzcLXfp9dZmLuwDjlcnx9Lzm6Asr8I6BYvk4FblGvuWxbCEcNcqOuX2h3FhKKs3MceTw==", "7lZJwoGALXLhkUpgCcB+nCqg7rrDRgzyiBlJHEN3QSHCfEbo6LXnS9+VIxDVqMTTW/qdQKjj3r2jV5K91DEZwazhrLYfp7nrjlGcTQ==", "NgpD1maokCD3c3KDoceqFgUIK27CWrNnhy3OrcLhrxYjyvlcHSyCkEQk2jexxb5+jShKQ40TrjflPS8j1M9Mjzvc933sz2sS/39C0g==", "FNOT/nRHNgk8Nsq2WTktbPfycJZcUZZf13LezGjXl3cNbjKYpTAquiI6I7kZ0a7CVXAylG1MjhMQbWKsMEeblUhkgaX2DP1JJCAipA==", "GTdE+11bZbs2SbpOk7Ubu/3qLzUsQt1WT3dGfrNc0YcJG/ejg0GTp9ge0yyHP/pUnQkINXtN3dNXH+HvNo0n6yvIqCVFr/0mImKqNA==", "8NKMcpX/ulApxQx/OY49tZ3/3Q6VZ10MfKbpj7Kr8zT/0hg9Px2LGuJKEuSFyZ7QLP5gRQyWFlDN8JBVvmo2Qw5CKZ6sQFJxnnJu7A==", "X8CX2IH3M9Ss/EMYN1+Zc0HmtT694vVms+2cU212qKOYiNBjI94a2iKkaQTZRskAUsRQF9ogPbl8458rFHFa0kVCZQprvCOcYF1zsQ==", "P7dQIrswYZl/xmQ46J4t9URzfGsrFc3AQw33M4VYhLEXW1aW10XKjckfD7NPVKimSNhd9LDzn63S+HPRbTtYCCEXwpLErlSSH+cJXA==", "N8xL8JokxWKcw0N+2Zsex5WwOWxXdTUI5xhyCweQfOinxbqzZFKlA28kCLIliyhbhAIHhQCCNmwLXuXFvhjcFxYogeOFPluWMwf8+g==", "TD9+lZ7Fn+iUGSkQToZ/xhQSQGSOaRlGchJD13IqggcEifcLRWXnwvzMVHm4gBfZeD0ScRKGUwvi/FEOGSVPsD+Roh2oRLAcaCxuEQ==", "rvatYEvqqqNzJD0w1SO9fyZXpbhBkKZe8/RN/8UesDByGWqSfg7rTLx16DD9tGE+mJhcwMloBJMlB3tJuEkia+BG2eXPVxZCOjRdJQ==", "bqiSW3Wf9y24MpE472whAj6F47Y9Pef0j+7CxV1jFst5R/xSL3AOyMyLgPAs2gqGnU8nIf44dGsM8DoZnSHhiOmijjQBjrLCghhM5Q==", "fPYOKU02FaZb071QKejqSFubNREa/BWfnjYaxQiPxtPven/TQul2+dOlhzumBCuHmYOuBCRBHKxQHXHh10JYnANEsXuli9WCZpgCHA==", "JQ/5TeknID3hwRbj1ntJtS2BdkiBFH8EG4/kIi/VF25txEIARP8M4PxM3RbbnYNY2xFSXBqlEqo8Z8fe7QrGsUDrW63TbcSAt4TcAg==", "kFiZ+xXW3Cn9EAcL63sA4OHsUuwaNPckyDnBaVtKSQk7WXSfYSFxh3AuFf0zjHg+GSGze/Cp/urJCXLRsXJQLeYJPD6pQfE0+Xs6vg==", "yQTM9zSmpvxUvVC39odEnWM8v3NGJ8uSXTSt3AudDE5NS16Lbcrxoq3f+3jOaRLgOqrqtWShpJMmrkjp0d+aDUHBFizh4U86TTEGCA==", "qQTdWNvCRZ5TjQI7bFp8O+0S6f8gGXWLwgRwp5srzrrV7yhYdVNGTqzk01jXieiU6FshQyUnCYmFo0LBbwmn3XvYMPSzf5dZuk+oYA==", "zYa8HaR3UAVbgKoUQeasfu0fqS1aogyUR4d63jA6AEgdW0ivcigADXJK5tx1Utm6rccC5xBUUqtl3eWXgdFPIl3c4qhNmb8aG9bNwA=="];
+const unb64=t=>Uint8Array.from(atob(t),c=>c.charCodeAt(0));
+async function openHead(code){
+ code=String(code||"").trim().toUpperCase();
+ const i=CODE_HASHES.indexOf(await sha256(code));if(i<0)return false;
+ const w=unb64(WRAPPED[i]),enc=new TextEncoder();
+ const base=await crypto.subtle.importKey("raw",enc.encode(code),"PBKDF2",false,["deriveKey"]);
+ const kk=await crypto.subtle.deriveKey({name:"PBKDF2",salt:w.slice(0,16),iterations:100000,hash:"SHA-256"},base,{name:"AES-GCM",length:256},false,["decrypt"]);
+ const raw=await crypto.subtle.decrypt({name:"AES-GCM",iv:w.slice(16,28)},kk,w.slice(28));
+ const mk=await crypto.subtle.importKey("raw",raw,"AES-GCM",false,["decrypt"]);
+ const p=unb64(PAYLOAD);
+ HEAD=JSON.parse(new TextDecoder().decode(await crypto.subtle.decrypt({name:"AES-GCM",iv:p.slice(0,12)},mk,p.slice(12))));
+ return true;
+}
+const sha256=async t=>{const b=await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t));return [...new Uint8Array(b)].map(x=>x.toString(16).padStart(2,"0")).join("")};
+function renderPremium(id,style,F,label){
+ const el=$(id),open=!!HEAD,vals=open?scale(HEAD[style],F):[];
+ const packageOptions=PREMIUM_PACKAGES.map(p=>`<option value="${p.id}">${p.name} — ${money(p.price)} ${t("so'm")}</option>`).join("");
+ el.innerHTML=`<h2>🎯 ${t("HEAD (BOSH) SENSI")} ${open?"✓":"🔒"}</h2>
+ <p class="muted small" style="margin:0">${t("Yuqoridagi qiymatlar bepul. Bosh nishonga olish uchun maxsus sozlama pullik.")}</p>
+ <div class="result-grid" style="margin-top:12px">${headNames.map((n,i)=>`<div class="result ${open?"":"locked"}"><span class="name">${n}</span><strong>${open?vals[i]+" / 200":"███ / 200"}</strong></div>`).join("")}</div>
+ ${open?`<p class="status">${t("Head sensi ochiq ✓")}</p>`:`<div style="margin-top:12px"><label class="muted small" for="premium-package-${id}">Premium paketni tanlang</label><select id="premium-package-${id}" data-package style="width:100%;margin-top:6px;padding:12px;border-radius:10px;background:#101b2b;color:white;border:1px solid #ffc857">${packageOptions}</select></div>
+ <div class="price" data-package-price>${money(PREMIUM_PACKAGES[0].price)} ${t("so'm")}</div>
+ <div class="actions"><a class="btn gold" data-buy-link target="_blank" rel="noopener" href="https://t.me/fayzik_ffstrem?text=${encodeURIComponent(`Salom! ${PREMIUM_PACKAGES[0].name} paketini sotib olmoqchiman. Qurilma: ${label}. Narx: ${money(PREMIUM_PACKAGES[0].price)} so'm.`)}">${t("✈ Telegram orqali sotib olish")}</a></div>
+ <p class="muted small">Paket nomi va qurilma modelini Telegram orqali yuboring. Paket sozlamasi qurilmaga qarab alohida tayyorlanadi. Foiz — paket nomi, aniq headshot natijasi kafolati emas.</p>
+ <div class="code"><input placeholder="${t("To'lovdan keyin olgan kodingiz")}" data-code><button class="btn" data-unlock>${t("Ochish")}</button></div><p class="status" data-pstatus></p>`}`;
+ const select=el.querySelector('[data-package]');
+ if(select) select.addEventListener('change',()=>{
+  const pkg=PREMIUM_PACKAGES.find(p=>p.id===select.value)||PREMIUM_PACKAGES[0];
+  el.querySelector('[data-package-price]').textContent=`${money(pkg.price)} ${t("so'm")}`;
+  const text=`Salom! ${pkg.name} paketini sotib olmoqchiman. Qurilma: ${label}. Narx: ${money(pkg.price)} so'm.`;
+  el.querySelector('[data-buy-link]').href=`https://t.me/fayzik_ffstrem?text=${encodeURIComponent(text)}`;
+ });
+}
+document.addEventListener("click",async e=>{
+ const b=e.target.closest("[data-unlock]");if(!b)return;
+ const box=b.closest(".premium"),st=box.querySelector("[data-pstatus]"),code=box.querySelector("[data-code]").value.trim();
+ if(!code){st.textContent=t("Kodni kiriting.");return}
+ st.style.color="var(--muted)";st.textContent=t("Tekshirilmoqda...");
+ try{
+  if(await openHead(code)){try{localStorage.setItem("fs-code",code)}catch(_){ }calcPhone();calcPC();}
+  else{st.style.color="var(--danger)";st.textContent=t("Kod noto'g'ri. Telegram orqali tekshiring.")}
+ }catch(err){st.style.color="var(--danger)";st.textContent=t("Brauzer kodni tekshira olmadi (HTTPS kerak).")}
+});
+try{const sc=localStorage.getItem("fs-code");if(sc)openHead(sc).then(ok=>{if(ok){calcPhone();calcPC()}}).catch(()=>{})}catch(e){}
+function resultCard(n,v){return `<div class="result"><span class="name">${n}</span><strong>${v} / 200</strong><div class="meter"><i style="width:${v/2}%"></i></div></div>`}
+function calcPC(){
+ const dpi=+$("dpi").value,style=$("pc-style").value,fb=$("pc-feedback").value;
+ const x=factor(style,{dpi,fb}),vals=scale(bases[style],x.F);
+ $("pc-results").innerHTML=vals.map((v,i)=>resultCard(names[i],v)).join("");
+ $("pc-formula").textContent=formulaText([t("holat")+" "+MODEL.fb[fb],"(800/"+dpi+")^"+MODEL.dpi+" "+r3(Math.pow(800/dpi,MODEL.dpi))],x);
+ renderPremium("pc-premium",style,x.F,"PC "+$("emulator").value+", DPI "+dpi);
+}
+function setStatus(id,msg){$(id).textContent=t(msg)}
+function copyText(text,status){if(navigator.clipboard?.writeText){navigator.clipboard.writeText(text).then(()=>setStatus(status,"Nusxa olindi ✓")).catch(()=>setStatus(status,"Nusxa olish uchun brauzer ruxsati kerak."));}else{setStatus(status,"Clipboard qo'llab-quvvatlanmaydi. Qiymatlarni qo'lda belgilang.");}}
+function saveProfile(){
+ const p=calcPhone(),arr=read("fs-profiles",[]);arr.unshift({...p,date:new Date().toLocaleString(LANG==="ru"?"ru-RU":"uz-UZ")});localStorage.setItem("fs-profiles",JSON.stringify(arr.slice(0,20)));setStatus("phone-status","Profil ushbu brauzerda saqlandi ✓");
+}
+function renderSaved(){
+ const arr=read("fs-profiles",[]);
+ $("saved-list").innerHTML=arr.length?arr.map((p,i)=>`<div class="weapon" style="margin-bottom:10px"><b>${escapeHtml(p.device==="Model tanlanmagan"?t(p.device):p.device)}</b> · ${escapeHtml(p.date||"")}<p class="muted small">${names.map((n,j)=>n+": "+p.values[j]).join(" · ")}</p><button class="btn" data-delete="${i}">${t("O'chirish")}</button></div>`).join(""):`<p class='muted'>${t("Hozircha saqlangan profil yo'q. Telefon sahifasida profil saqlang.")}</p>`;
+}
+function renderWeapons(){
+ const q=$("weapon-search").value.toLowerCase(),f=document.querySelector("#weapon-tabs .active")?.dataset.filter||"all";
+ const arr=weaponData.filter(w=>(f==="all"||w[0]===f)&&w[1].toLowerCase().includes(q));
+ $("weapon-list").innerHTML=arr.map(w=>`<div class="weapon"><span class="kicker">${w[0]}</span><br><b>${w[1]}</b><div class="muted small">${t("Scope")}: ${escapeHtml(w[2]).replace(/no scope/i,LANG==="ru"?"без прицела":"no scope")}<br>${t(w[3])}<br><strong style="color:var(--cyan)">${t("Tavsiya sensi")}: ${weaponSens(w)}</strong></div></div>`).join("")||`<p class='muted'>${t("Qurol topilmadi.")}</p>`;
+}
+const SHOP={hours:"14:00–23:00",card:"5614 6818 7063 9170",cardOwner:"Hamkor Bank, ASHURBEKOV F",phone:"+998 95 239 21 41",orders:"",reviews:[]}; // bo'sh qoldirilsa, tegishli qism ko'rinmaydi
+function renderShop(){
+ const pay=SHOP.card?`<li>${t("To'lang:")} <b>${escapeHtml(SHOP.card)}</b> <button class="btn" style="padding:3px 10px" data-copycard>${t("📋 Nusxa")}</button><br>${escapeHtml(SHOP.cardOwner)}. ${t("Aniq summani Telegramda tasdiqlang.")}</li>`:`<li>${t("To'lov rekvizitlarini Telegram orqali so'rang, yakuniy summa ham o'sha yerda aytiladi.")}</li>`;
+ const trust=[SHOP.hours?`${t("🕒 Ish vaqti:")} ${escapeHtml(SHOP.hours)}`:"",SHOP.phone?`${t("📞 Aloqa:")} ${escapeHtml(SHOP.phone)}`:"",SHOP.orders?`✅ ${escapeHtml(SHOP.orders)}`:""].filter(Boolean).join("<br>");
+ const rev=SHOP.reviews.length?`<h2 style="margin-top:20px">${t("Mijozlar fikri")}</h2>`+SHOP.reviews.map(r=>`<div class="weapon" style="margin-bottom:8px">${escapeHtml(r.text)}<div class="muted small">— ${escapeHtml(r.name)}</div></div>`).join(""):"";
+ $("shop-guide").innerHTML=`<h2>${t("🧾 Qanday buyurtma beraman?")}</h2><ol class="muted"><li>${t("Quyidagi ro'yxatdan paket tanlang.")}</li><li>${t("Telegramda @fayzik_ffstrem ga paket nomi va Free Fire UID raqamingizni yozing.")}</li>${pay}<li>${t("To'lov chekining skrinshotini Telegramga yuboring.")}</li><li>${t("To'lov tasdiqlangach, paket hisobingizga tushadi.")}</li></ol><h2 style="margin-top:20px">${t("📌 Qoidalar")}</h2><ul class="muted"><li>${t("Buyurtmadan oldin UID raqamingizni diqqat bilan tekshiring. Noto'g'ri UID ga yuborilgan paket uchun javobgar emasmiz.")}</li><li>${t("To'lov tasdiqlangach paket tushmasa, pulingiz qaytariladi yoki paket qayta yuboriladi.")}</li><li>${t("Head sensi raqamli mahsulot: kod ochilgandan keyin pul qaytarilmaydi.")}</li></ul>${trust?`<p>${trust}</p>`:""}${rev}`;
+}
+document.addEventListener("click",e=>{const b=e.target.closest("[data-copycard]");if(!b)return;const c=SHOP.card.replace(/\s/g,"");if(navigator.clipboard?.writeText)navigator.clipboard.writeText(c).then(()=>{b.textContent=t("✓ Nusxa olindi")}).catch(()=>{b.textContent=t("Qo'lda nusxalang")});else b.textContent=t("Qo'lda nusxalang");});
+function route(){
+ const id=(location.hash||"#home").slice(1),valid=["home","phone","pc","weapons","almaz","saved"],page=valid.includes(id)?id:"home";
+ document.querySelectorAll(".page").forEach(el=>el.classList.toggle("hidden",el.id!==page));
+ document.querySelectorAll("nav a").forEach(a=>a.classList.toggle("active",a.getAttribute("href")==="#"+page));
+ if(page==="phone")calcPhone();if(page==="pc")calcPC();if(page==="weapons")renderWeapons();if(page==="saved")renderSaved();if(page==="almaz")renderShop();
+ window.scrollTo(0,0);
+}
+$("feedback").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("#feedback button").forEach(x=>x.classList.toggle("selected",x===b));calcPhone();});
+["device","ram","hz","style"].forEach(id=>$(id).addEventListener("input",calcPhone));
+["dpi","pc-style","pc-feedback","emulator"].forEach(id=>$(id).addEventListener("change",calcPC));
+$("copy-phone").onclick=()=>{const p=calcPhone();copyText(names.map((n,i)=>`${n}: ${p.values[i]}`).join("\n"),"phone-status");};
+$("save-phone").onclick=saveProfile;
+$("weapon-search").addEventListener("input",renderWeapons);
+$("weapon-tabs").addEventListener("click",e=>{const b=e.target.closest("button");if(!b)return;document.querySelectorAll("#weapon-tabs button").forEach(x=>x.classList.toggle("active",x===b));renderWeapons();});
+$("saved-list").addEventListener("click",e=>{const b=e.target.closest("[data-delete]");if(!b)return;const a=read("fs-profiles",[]);a.splice(+b.dataset.delete,1);localStorage.setItem("fs-profiles",JSON.stringify(a));renderSaved();});
+fillDevices();window.addEventListener("hashchange",route);setLang(LANG);route();
+</script>
+</body></html>
