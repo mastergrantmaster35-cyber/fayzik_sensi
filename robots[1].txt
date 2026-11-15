@@ -1,5 +1,0 @@
-User-agent: *
-Allow: /
-Disallow: /saqlangan/
-
-Sitemap: https://fayziksensi.netlify.app/sitemap.xml
